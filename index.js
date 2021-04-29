@@ -1,4 +1,4 @@
-//This code is hosted on this domain >>> https://i-want-to-join-ideta.herokuapp.com
+//This code is hosted on this URL >>> https://i-want-to-join-ideta.herokuapp.com
 
 const express = require('express');
 const app = express();
