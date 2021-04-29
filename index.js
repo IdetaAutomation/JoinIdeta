@@ -30,12 +30,9 @@ const valid_candidacy = Joi.object({
 app.use(express.json());
 
 app.post('/apply', (req, res) => {
-	const candidate = req.body;
 	try {
-		console.log('Let\'s see who tried what : ', candidate, !valid_candidacy.validate(candidate).error);
+		const candidate = req.body;
 		if (!valid_candidacy.validate(candidate).error) {
-			console.log(candidate.abilities);
-			console.log(candidate.abilities.includes('Angular 2+'), candidate.abilities.includes('SCSS'), candidate.abilities.includes('HTML'));
 			if (candidate.abilities.includes('Angular 2+') &&
 				candidate.abilities.includes('SCSS') &&
 				candidate.abilities.includes('HTML')) {
@@ -44,16 +41,16 @@ app.post('/apply', (req, res) => {
 					if (candidate.extra_professional_activities.includes('footbAll') ||
 						candidate.extra_professional_activities.includes('Supporting Barcelona')) {
 						res.send('You are a great fit to this company. \nSend me a mail at : ' +
-							(process.env.HE_DID_NOT_CHEAT_FOOTBALL || "yanis+whatisthepasscode@ideta.io"));
+							("yanis+" + process.env.HE_DID_NOT_CHEAT + "@ideta.io" || "yanis+whatisthepasscode@ideta.io"));
 					} else {
 						res.send('Have you ever considered playing football or supporting Barcelona ;-) ?\n' +
 							'Send me a mail at : ' +
-							(process.env.HE_DID_NOT_CHEAT_BUT_NO_FOOTBALL ||
+							("yanis+" + process.env.HE_DID_NOT_CHEAT_BUT_NO_FOOTBALL + "@ideta.io" ||
 								"yanis+whatisthepasscode@ideta.io"));
 					}
 				} else {
 					res.send('Are you sure you want to apply ? \n' +
-						'Send me an email at :' + ("yanis+whatisthepasscode@ideta.io" || process.env.NOT_PARIS_NOT_REMOTE));
+						'Send me an email at :' + ("yanis+whatisthepasscode@ideta.io" || "yanis+" + process.env.NOT_PARIS_NOT_REMOTE + "@ideta.io"));
 				}
 			} else {
 				res.send('Even though this is some backend code, we are looking for a frontend developer !\n' +
