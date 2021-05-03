@@ -29,6 +29,10 @@ const valid_candidacy = Joi.object({
 
 app.use(express.json());
 
+app.get('/', (req, res) => {
+	res.send('It\'s a good first step, you should read further...');
+})
+
 app.post('/apply', (req, res) => {
 	try {
 		const candidate = req.body;
@@ -41,11 +45,11 @@ app.post('/apply', (req, res) => {
 					if (candidate.extra_professional_activities.includes('footbAll') ||
 						candidate.extra_professional_activities.includes('Supporting Barcelona')) {
 						res.send('You are a great fit to this company. \nSend me a mail at : ' +
-							("yanis+" + process.env.HE_DID_NOT_CHEAT + "@ideta.io" || "yanis+whatisthepasscode@ideta.io"));
+							("yanis+" + process.env.THEY_DID_NOT_CHEAT + "@ideta.io" || "yanis+whatisthepasscode@ideta.io"));
 					} else {
 						res.send('Have you ever considered playing football or supporting Barcelona ;-) ?\n' +
 							'Send me a mail at : ' +
-							("yanis+" + process.env.HE_DID_NOT_CHEAT_BUT_NO_FOOTBALL + "@ideta.io" ||
+							("yanis+" + process.env.THEY_DID_NOT_CHEAT_BUT_NO_FOOTBALL + "@ideta.io" ||
 								"yanis+whatisthepasscode@ideta.io"));
 					}
 				} else {
@@ -62,7 +66,9 @@ app.post('/apply', (req, res) => {
 				'Check our requirements and try again :-) ');
 		}
 	} catch(error) {
-		res.send("What they tried to crash the server and make me look like a fool and get extra attention... : ", error);
+		console.log(JSON.stringify(error));
+		res.send("What they tried to crash the server and make me look like a fool and get extra attention... : " +
+			JSON.stringify(error));
 	}
 
 })
