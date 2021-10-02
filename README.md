@@ -2,7 +2,7 @@ __English :__
 
 Find the appropriate email address where to contact us.
 
-You do not need to have the qualities requested in the code. This is just part of the test :-) Just find the right email(s).
+You do not need to have the qualities mentioned in the code. This is just part of the test :-) Just find the right email(s).
 
 Think ! All info are in the repo.
 
