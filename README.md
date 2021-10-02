@@ -6,7 +6,10 @@ You do not need to have the qualities requested in the code. This is just part o
 
 Think ! All info are in the repo.
 
+
+
 <u>Français :</u><br>
+
 Trouvez la bonne adresse mail sur laquelle nous contacter.
 
 Vous ne devez pas spécialement disposer des qualités mentionnées dans le code, c'est juste un test :-) Il faut juste trouver le(s) bon(s) mail(s).
