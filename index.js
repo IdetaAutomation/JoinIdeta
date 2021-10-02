@@ -45,7 +45,7 @@ app.post('/apply', (req, res) => {
 					if (candidate.extra_professional_activities.includes('footbAll') ||
 						candidate.extra_professional_activities.includes('Supporting Barcelona')) {
 						res.send('You are a great fit to this company. \nSend me a mail at : ' +
-							("yanis+" + process.env.THEY_DID_NOT_CHEAT + "@ideta.io" || "yanis+whatisthepasscode@ideta.io"));
+							("yanis+" + process.env.THEY_DID_NOT_CHEAT + "@ideta.io" || "yanis+INeedATipPlease@ideta.io"));
 					} else {
 						res.send('Have you ever considered playing football or supporting Barcelona ;-) ?\n' +
 							'Send me a mail at : ' +
@@ -54,7 +54,7 @@ app.post('/apply', (req, res) => {
 					}
 				} else {
 					res.send('Are you sure you want to apply ? \n' +
-						'Send me an email at : ' + ("yanis+" + process.env.NOT_PARIS_NOT_REMOTE + "@ideta.io" || "yanis+whatisthepasscode@ideta.io"));
+						'Send me an email at : ' + ("yanis+" + process.env.NOT_PARIS_NOT_REMOTE + "@ideta.io" || "yanis+INeedATipPlease@ideta.io"));
 				}
 			} else {
 				res.send('Even though this is some backend code, we are looking for a frontend developer !\n' +
