@@ -1,4 +1,4 @@
-<u>English :</u><br>
+__English :__
 
 Find the appropriate email address where to contact us.
 
@@ -8,7 +8,7 @@ Think ! All info are in the repo.
 
 
 
-<u>Français :</u><br>
+__Français :__<br>
 
 Trouvez la bonne adresse mail sur laquelle nous contacter.
 
